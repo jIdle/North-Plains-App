@@ -5,6 +5,8 @@ import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import News from './pages/News/News';
 import NewsArticle from './pages/News/NewsArticle';
+import { History } from 'history';
+import { useHistory } from 'react-router';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -25,17 +27,27 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route path="/home" component={Home} exact={true} />
-        <Route path="/news" component={News} exact={true} />
-        <Route path="/news/:id" component={NewsArticle} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/news" />} />
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+// Add custom property 'apphistory' to the global window object
+// https://github.com/ionic-team/ionic/issues/20297
+declare global {
+  interface Window { appHistory: History }
+}
+
+const App: React.FC = () => {
+  // Store the history object globally so we can access it outside of React components
+  window.appHistory = useHistory()
+  return (
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route path="/home" component={Home} exact={true} />
+          <Route path="/news" component={News} exact={true} />
+          <Route path="/news/:id" component={NewsArticle} exact={true} />
+          <Route exact path="/" render={() => <Redirect to="/news" />} />
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+  )
+};
 
 export default App;

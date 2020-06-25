@@ -14,29 +14,18 @@ import { IonContent,
          IonLabel,
          IonButton,
          IonRouterOutlet,
-         IonNav
+         IonNav,
+         IonButtons,
+         IonBackButton
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { Redirect, Route, Link } from 'react-router-dom';
+import { Redirect, Route, Link, useLocation, withRouter } from 'react-router-dom';
 import { pin, wifi, wine, warning, walk } from 'ionicons/icons';
 import NewsArticle from './NewsArticle';
 // import NewsArticle from '../../components/NewsArticle';
+import NewsCard from '../../components/NewsCard';
 import { render } from '@testing-library/react';
-
-// Test data
-// import newsItems from '../../test/newsItems.js';
-export const newsItems = [
-  {
-    title: "COVID-19 Emergency Declaration extended through September 30, 2020",
-    date: "Monday, June 15",
-    id: "2"
-  },
-  {
-    title: "Limited Business Hours for City Hall",
-    date: "Sunday, June 14",
-    id: "1"
-  }
-]
+import { newsArticles } from '../../assets/content/news/content';
 
 type Props = { props: any };
 type State = { articles: Array<any>, segment: string};
@@ -57,49 +46,28 @@ class News extends React.Component<Props, State> {
   render() {
     return (
       <IonPage>
-        <IonRouterOutlet>
-          {/* <Route exact path="/news/newsdetail" component={NewsArticle} /> */}
+        {/* <IonRouterOutlet>
+          <Route exact path="/news/newsdetail" component={NewsArticle} />
           <Route path="/news/:id" component={NewsArticle} exact={true} />
-        </IonRouterOutlet>
+        </IonRouterOutlet> */}
         <IonHeader>
           <IonToolbar>
+            <IonButtons slot="start">
+              <IonBackButton />
+            </IonButtons>
             <IonTitle>News</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent>
-
-          {newsItems.map((item) => (
-            // <IonCard routerLink="/news/newsdetail">
-            <IonCard onClick={() => this.handleClick(item.id)} >
-            {/* <IonCard> */}
-            {/* <IonCard>*/}
-
-            {/* <IonCard onClick={(e) => {
-              e.preventDefault();
-              history.pushState('/news')
-            }} button={true} key={item.id}> */}
-
-              {/* <IonItem routerLink="/news/newsdetail">
-                <IonLabel>Item 1</IonLabel>
-              </IonItem> */}
-
-              <IonCardHeader>
-                <IonCardSubtitle>
-                  {item.date}
-                </IonCardSubtitle>
-                <IonCardTitle>
-                  {item.title}
-                </IonCardTitle>
-              </IonCardHeader>
-              <IonCardContent>
-              </IonCardContent>
-            </IonCard>
-          ))}
+          {newsArticles.map((article: any) => 
+            <NewsCard title={article.title} date={article.date} id={article.id}
+                      content={article.content}></NewsCard>
+          )}
 
         </IonContent>
       </IonPage>
     );
-          };
+  };
 };
 
 export default News;
