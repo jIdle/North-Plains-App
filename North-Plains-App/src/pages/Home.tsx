@@ -34,7 +34,7 @@ const Home: React.FC = () => {
       <IonFooter>
         <IonSlides>
           <IonSlide>
-            <IonGrid>
+            <IonGrid class="blue">
               <IonRow class="ion-text-center">
                 <IonCol><IonButton><IonIcon icon={batteryFullOutline}/></IonButton></IonCol>
                 <IonCol><IonButton><IonIcon icon={musicalNoteOutline}/></IonButton></IonCol>
