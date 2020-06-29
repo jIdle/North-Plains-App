@@ -7,6 +7,7 @@ import News from './pages/News/News';
 import NewsArticle from './pages/News/NewsArticle';
 import { History } from 'history';
 import { useHistory } from 'react-router';
+import { GridExample } from './test/grid';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -43,7 +44,9 @@ const App: React.FC = () => {
           <Route path="/home" component={Home} exact={true} />
           <Route path="/news" component={News} exact={true} />
           <Route path="/news/:id" component={NewsArticle} exact={true} />
-          <Route exact path="/" render={() => <Redirect to="/news" />} />
+          <Route exact path="/grid" component={GridExample} />
+          <Route exact path="/" render={() => <Redirect to="/home" />} />
+          {/* <Route exact path="/" render={() => <Redirect to="/grid" />} /> */}
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>

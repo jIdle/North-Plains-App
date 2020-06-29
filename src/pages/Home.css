@@ -1,3 +1,60 @@
-.blue{
-  background-color:blue;
+body {
+  /* background-color: #2b4c9b; */
+  background-color: blue;
+  min-height: 100%;
+}
+
+.titleicon {
+  height: 56px;
+}
+
+.title {
+  padding-left: 5px;
+}
+
+.settings {
+  margin: 0 auto;
+}
+
+.image-slides {
+  height: 25vh;
+  object-fit: cover;
+}
+
+/* Buttons */
+.menu-button {
+  /* top leftright bottom */
+  margin: 20px 5px 10px;
+  color: white
+}
+
+/* Icons */
+ion-icon {
+  font-size: 30px
+}
+
+/* Icon text */
+ion-col {
+  color: white;
+  font-size: 12pt;
+}
+
+/* Slides containing buttons stretch to bottom */
+.slides-buttons-container {
+  height: 50vh;
+  background-color: blue;
+  bottom: 0%;
+  padding-bottom: calc(100vh - 56px - 25vh);
+}
+
+/* Align buttons */
+ion-row {
+  margin-bottom: 5%;
+}
+
+/* Paginator on bottom */
+.swiper-container-horizontal > .swiper-pagination {
+  position: fixed;
+  bottom: 0%;
+  padding-bottom: 5px;
 }

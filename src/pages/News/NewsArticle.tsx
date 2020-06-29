@@ -5,9 +5,11 @@ import { IonPage,
          IonTitle,
          IonButtons,
          IonBackButton,
+         IonContent,
 } from '@ionic/react';
 import { useParams } from 'react-router-dom';
 import { findArticle } from '../../hooks/findArticle';
+import './NewsArticle.css';
 
 type Props = {
   title: string,
@@ -32,8 +34,10 @@ const NewsArticle: React.FC<Props> = () => {
             <IonTitle>News</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <h3>{found.date ?? ""}</h3>
-        <div dangerouslySetInnerHTML={{ __html: found.content}} />
+        <IonContent>
+          <p className="date">{found.date ?? ""}</p>
+          <div dangerouslySetInnerHTML={{ __html: found.content }} />
+        </IonContent>
       </IonPage>
     )
 };
