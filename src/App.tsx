@@ -44,9 +44,7 @@ const App: React.FC = () => {
           <Route path="/home" component={Home} exact={true} />
           <Route path="/news" component={News} exact={true} />
           <Route path="/news/:id" component={NewsArticle} exact={true} />
-          <Route exact path="/grid" component={GridExample} />
-          <Route exact path="/" render={() => <Redirect to="/home" />} />
-          {/* <Route exact path="/" render={() => <Redirect to="/grid" />} /> */}
+          <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>

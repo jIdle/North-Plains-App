@@ -38,6 +38,7 @@ import {
 } from 'ionicons/icons'
 import React from 'react';
 import './Home.css';
+import { render } from '@testing-library/react';
 
 type Image = {
   src: string;
@@ -70,6 +71,7 @@ const slideOpts = {
 }
 
 const Home: React.FC = () => {
+// class Home extends React.Component {
   return (
     <IonPage>
       <IonHeader>
