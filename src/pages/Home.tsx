@@ -13,28 +13,29 @@ import {
   IonSlides,
   IonSlide,
   IonImg,
-  IonThumbnail
+  IonThumbnail,
 } from '@ionic/react';
 import {
-  bus,
+  settingsOutline,
+  play,
   notifications,
+  cardOutline,
   newspaperOutline,
   calendarOutline,
-  bookOutline,
-  cardOutline,
   leafOutline,
-  clipboardOutline,
+  walkOutline,
+  bookOutline,
   peopleOutline,
+  clipboardOutline,
+  documentsOutline,
+  trailSignOutline,
+  bus,
   paperPlaneOutline,
   helpOutline,
   linkOutline,
-  documentTextOutline,
-  trailSignOutline,
   peopleCircleOutline,
   chatbubblesOutline,
   desktopOutline,
-  play,
-  settingsOutline,
 } from 'ionicons/icons'
 import React from 'react';
 // import './Home.css';
@@ -76,7 +77,7 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonButton className="settings" slot="primary" fill="clear"><IonIcon icon={settingsOutline}></IonIcon></IonButton>
+          <IonButton className="settings" routerLink="/settings" slot="primary" fill="clear"><IonIcon icon={settingsOutline}></IonIcon></IonButton>
           <IonThumbnail slot="start">
             <IonImg className="titleicon" src="https://www.northplains.org/sites/all/themes/aha_compass/logo.png" />
           </IonThumbnail>
@@ -92,11 +93,18 @@ const Home: React.FC = () => {
             </IonSlide>
           ))}
         </IonSlides>
+
         <div className="slides-buttons-container">
           <IonSlides pager>
+            
+
+
             <IonSlide>
               <IonGrid>
-                <IonRow class="ion-text-center">
+                {/* Align buttons to top of row */}
+                <IonRow className="ion-align-items-start">
+                {/* I think ionic auto-centers text? */}
+                {/* <IonRow className="ion-text-center"> */}
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={play} /></IonButton><br/>Welcome</IonCol>
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={notifications} /></IonButton><br/>Notifications</IonCol>
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={cardOutline} /></IonButton><br/>Pay Utilities</IonCol>
@@ -107,27 +115,34 @@ const Home: React.FC = () => {
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={leafOutline} /></IonButton><br/>Parks</IonCol>
                 </IonRow>
                 <IonRow class="ion-text-center">
+                  <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={walkOutline} /></IonButton><br/>Community Events</IonCol>
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={bookOutline} /></IonButton><br/>City Library</IonCol>
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={peopleOutline} /></IonButton><br/>City Council</IonCol>
-                  <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={clipboardOutline} /></IonButton><br/>Agendas & Minutes</IonCol>
                 </IonRow>
               </IonGrid>
             </IonSlide>
             <IonSlide>
               <IonGrid>
-                <IonRow class="ion-text-center">
-                  <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={documentTextOutline} /></IonButton><br/>Municipal Code</IonCol>
+                <IonRow className="ion-align-items-start">
+                  <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={clipboardOutline} /></IonButton><br/>Agendas & Minutes</IonCol>
+                  <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={documentsOutline} /></IonButton><br/>Municipal Code</IonCol>
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={trailSignOutline} /></IonButton><br/>Report a Code Violation</IonCol>
-                  <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={bus} /></IonButton><br/>Bus Schedules</IonCol>
                 </IonRow>
                 <IonRow class="ion-text-center">
+                  <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={bus} /></IonButton><br/>Bus Schedules</IonCol>
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={paperPlaneOutline} /></IonButton><br/>Who do I Contact?</IonCol>
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={helpOutline} /></IonButton><br/>FAQ's</IonCol>
-                  <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={linkOutline} /></IonButton><br/>Useful Links</IonCol>
                 </IonRow>
                 <IonRow class="ion-text-center">
+                  <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={linkOutline} /></IonButton><br/>Useful Links</IonCol>
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={peopleCircleOutline} /></IonButton><br/>Our Staff</IonCol>
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={chatbubblesOutline} /></IonButton><br/>Contact Us</IonCol>
+                </IonRow>
+              </IonGrid>
+            </IonSlide>
+            <IonSlide>
+              <IonGrid>
+                <IonRow className="ion-align-items-start">
                   <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={desktopOutline} /></IonButton><br/>Our Website</IonCol>
                 </IonRow>
               </IonGrid>

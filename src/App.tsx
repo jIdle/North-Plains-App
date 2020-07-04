@@ -2,12 +2,16 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+// Page imports
 import Home from './pages/Home';
 import News from './pages/News/News';
 import NewsArticle from './pages/News/NewsArticle';
+import Settings from './pages/Settings';
+// Testing imports
+import { GridExample } from './test/grid';
+
 import { History } from 'history';
 import { useHistory } from 'react-router';
-import { GridExample } from './test/grid';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -44,7 +48,11 @@ const App: React.FC = () => {
           <Route path="/home" component={Home} exact={true} />
           <Route path="/news" component={News} exact={true} />
           <Route path="/news/:id" component={NewsArticle} exact={true} />
+          <Route path="/settings" component={Settings} exact={true} />
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
+          {/* Grid test */}
+          {/* <Route path="/test" component={GridExample} exact={true} />
+          <Route path="/" render={() => <Redirect to="/test" />} exact={true} /> */}
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
