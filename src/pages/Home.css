@@ -41,7 +41,6 @@ ion-col {
 /* Slides containing buttons stretch to bottom */
 .slides-buttons-container {
   height: 50vh;
-  /* background-color: blue; */
   background-color: #2b4c9b;
   bottom: 0%;
   padding-bottom: calc(100vh - 56px - 25vh);

@@ -37,7 +37,7 @@ import {
   settingsOutline,
 } from 'ionicons/icons'
 import React from 'react';
-import './Home.css';
+// import './Home.css';
 import { render } from '@testing-library/react';
 
 type Image = {
