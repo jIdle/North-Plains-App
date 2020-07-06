@@ -4,39 +4,38 @@ import {
   IonCardHeader,
   IonCardSubtitle,
   IonCardTitle,
-  IonCardContent,
 } from '@ionic/react';
 
 type Props = {
-  title: string,
-  date: string,
-  id: string,
-  content: string
+  article: any
+  // title: string,
+  // date: string,
+  // id: string,
+  // content: string
 }
 
 class NewsCard extends React.Component<Props> {
 
-  constructor(props: Props) {
-    super(props);
-    this.routeLink = "/news/" + this.props.id;
-  }
-  routeLink: string;
+  // constructor(props: Props) {
+  //   super(props);
+  //   this.routeLink = "/news/" + this.props.article.id;
+  // }
+  routeLink: string = "/news/" + this.props.article.id;
 
   render() {
-    console.log("this.props", this.props)
+    console.log("this.props.article", this.props.article)
     return (
-      <IonCard onClick={() => console.log("routeLink="+this.routeLink)} 
-              title={this.props.title} id={this.props.id} routerLink={this.routeLink}>
+      // <IonCard onClick={() => console.log("routeLink="+this.routeLink)} 
+      //         title={this.props.article.title} id={this.props.article.id} routerLink={this.routeLink}>
+      <IonCard title={this.props.article.title} id={this.props.article.id} routerLink={this.routeLink}>
         <IonCardHeader>
           <IonCardSubtitle>
-            {this.props.date}
+            {this.props.article.date}
           </IonCardSubtitle>
           <IonCardTitle>
-            {this.props.title}
+            {this.props.article.title}
           </IonCardTitle>
         </IonCardHeader>
-        <IonCardContent>
-        </IonCardContent>
       </IonCard>
     );
   }

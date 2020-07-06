@@ -20,9 +20,9 @@ class News extends React.Component<Props, State> {
     this.routeLink = "";
   }
   handleClick(id: string) {
-    console.log(id);
+    console.log("id", id);
     this.routeLink = "/news/" + id;
-    console.log(this.routeLink);
+    console.log("this.routeLink", this.routeLink);
   }
   render() {
     return (
@@ -37,8 +37,9 @@ class News extends React.Component<Props, State> {
         </IonHeader>
         <IonContent>
           {newsArticles.map((article: any) => 
-            <NewsCard title={article.title} date={article.date} id={article.id}
-                      content={article.content}></NewsCard>
+            // <NewsCard title={article.title} date={article.date} id={article.id}
+            //           content={article.content}></NewsCard>
+            <NewsCard article={article}></NewsCard>
           )}
         </IonContent>
       </IonPage>

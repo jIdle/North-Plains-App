@@ -1,3 +1,6 @@
+// Toggle usage:  https://ionicframework.com/docs/api/toggle#usage
+// Need to find out how to set initial settings
+
 import React, { useState } from 'react';
 
 import { get, set } from '../services/storage';
@@ -15,74 +18,68 @@ import {
   IonLabel,
   IonItem,
   IonToggle,
+  withIonLifeCycle
 } from '@ionic/react'
 
-const Settings: React.FC = () => {
-  const [checked, setChecked] = useState(false);
-  return (
-    // <IonPage>
-    //   <IonHeader>
-    //     <IonToolbar>
-    //       <IonButtons slot="start">
-    //         <IonBackButton />
-    //       </IonButtons>
-    //       <IonTitle className="title">Settings</IonTitle>
-    //     </IonToolbar>
-    //   </IonHeader>
-    //   <IonContent>
-        
-    //   </IonContent>
+type Props = { props: any };
+type State = { notifications: Array<any> };
+
+// const Settings: React.FC = () => {
+class Settings extends React.Component<Props, State> {
+  testValue: any;
+
+  // ionViewDidEnter() {
+  //   console.log("ionViewDidEnter()");
+  // }
+  async ionViewDidEnter() {
+    if (get("NotificationNews") == null) {
+      console.log("NULL")
+    }
+    set("NotificationNews", true);
+    this.testValue = await get("NotificationNews");
+    console.log("ionViewDidEnter()", this.testValue);
+  }
+
+  render() {
+    return (
+      // <IonPage>
+      //   <IonHeader>
+      //     <IonToolbar>
+      //       <IonButtons slot="start">
+      //         <IonBackButton />
+      //       </IonButtons>
+      //       <IonTitle className="title">Settings</IonTitle>
+      //     </IonToolbar>
+      //   </IonHeader>
+      //   <IonContent>
+
+      //   </IonContent>
 
 
-    // </IonPage>
-    <IonPage>
-    <IonHeader>
-      <IonToolbar>
-        <IonTitle>ToggleExamples</IonTitle>
-      </IonToolbar>
-    </IonHeader>
-    <IonContent>
-      <IonList>
+      // </IonPage>
+      <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonButtons slot="start">
+              <IonBackButton />
+            </IonButtons>
+            <IonTitle>Settings</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <IonContent>
+          <IonList>
 
-        <IonItemDivider>Default Toggle</IonItemDivider>
-        <IonItem>
-          <IonLabel>Checked: {JSON.stringify(checked)}</IonLabel>
-          <IonToggle checked={checked} onIonChange={e => setChecked(e.detail.checked)} />
-        </IonItem>
+            <IonItemDivider>Notifications</IonItemDivider>
+            <IonItem>
+              <IonLabel>News: {this.testValue}</IonLabel>
+              <IonToggle checked={this.testValue} onIonChange={e => set("myValue", e.detail.checked)} />
+            </IonItem>
 
-        <IonItemDivider>Disabled Toggle</IonItemDivider>
-        <IonItem><IonToggle disabled /></IonItem>
-
-        <IonItemDivider>Checked Toggle</IonItemDivider>
-        <IonItem><IonToggle checked /></IonItem>
-
-        <IonItemDivider>Toggle Colors</IonItemDivider>
-        <IonItem><IonToggle color="primary" /></IonItem>
-        <IonItem><IonToggle color="secondary" /></IonItem>
-        <IonItem><IonToggle color="danger" /></IonItem>
-        <IonItem><IonToggle color="light" /></IonItem>
-        <IonItem><IonToggle color="dark" /></IonItem>
-
-        <IonItemDivider>Toggles in a List</IonItemDivider>
-        <IonItem>
-          <IonLabel>Pepperoni</IonLabel>
-          <IonToggle value="pepperoni" />
-        </IonItem>
-
-        <IonItem>
-          <IonLabel>Sausage</IonLabel>
-          <IonToggle value="sausage" disabled={true} />
-        </IonItem>
-
-        <IonItem>
-          <IonLabel>Mushrooms</IonLabel>
-          <IonToggle value="mushrooms" />
-        </IonItem>
-      </IonList>
-    </IonContent>
-  </IonPage>
-  )
-
+          </IonList>
+        </IonContent>
+      </IonPage>
+    )
+  }
 };
 
-export default Settings;
+export default withIonLifeCycle(Settings);
