@@ -99,7 +99,8 @@ const Home: React.FC = () => {
 
         <IonSlides pager={true} className="slides-buttons-container">
           <IonSlide>
-            <IonGrid className="slide-grid">
+            {/* <IonGrid className="slide-grid"> */}
+            <IonGrid>
               <IonRow className="ion-text-center">
                 <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={play} /></IonButton><br />Welcome</IonCol>
                 <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={notifications} /></IonButton><br />Notifications</IonCol>
