@@ -11,7 +11,8 @@ import {
   IonButton,
   IonIcon,
   IonSlides,
-  IonSlide
+  IonSlide,
+  IonImg
 } from '@ionic/react';
 import { heart, ellipse, square,
          triangle, planet, bus,
@@ -20,10 +21,24 @@ import { heart, ellipse, square,
          playOutline, pauseOutline, stopOutline,
          fingerPrintOutline, flaskOutline, flameOutline
 } from 'ionicons/icons'
-import React from 'react';
+import React, { useRef } from 'react';
 import './Home.css';
 
 const Home: React.FC = () => {
+  const slidesRef = useRef(document.createElement('ion-slides'))
+  const AutoPlay = () => {
+    slidesRef.current.lockSwipes(true)
+    setTimeout(() => {
+      slidesRef.current.lockSwipes(false)
+      slidesRef.current.isEnd().then((value) => {
+        if(value) {
+          slidesRef.current.slideTo(0)
+        } else {
+          slidesRef.current.slideNext()
+        }
+      })
+    }, 5000)
+  }
   return (
     <IonPage>
       <IonHeader>
@@ -31,6 +46,22 @@ const Home: React.FC = () => {
           <IonTitle>North Plains</IonTitle>
         </IonToolbar>
       </IonHeader>
+      <IonContent>
+        <IonSlides onIonSlidesDidLoad={() => AutoPlay()} onIonSlideTransitionEnd={() => AutoPlay()} ref={slidesRef}>
+          <IonSlide>
+            <IonImg src={'https://icatcare.org/app/uploads/2018/09/Scottish-fold.png'}/>
+          </IonSlide>
+          <IonSlide>
+            <IonImg src={'https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/08/kitten-440379.jpg'}/>
+          </IonSlide>
+          <IonSlide>
+            <IonImg src={'https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/06/cat-217679.jpg'}/>
+          </IonSlide>
+          <IonSlide>
+            <IonImg src={'https://cdn.britannica.com/67/197567-050-DA8E36D5/Scottish-fold-cat-feline.jpg'}/>
+          </IonSlide>
+        </IonSlides>
+      </IonContent>
       <IonFooter>
         <IonSlides>
           <IonSlide>
