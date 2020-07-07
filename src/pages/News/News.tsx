@@ -1,14 +1,12 @@
 import React from 'react';
-import { IonContent,
-         IonHeader,
-         IonPage,
-         IonTitle,
-         IonToolbar,
-         IonButtons,
-         IonBackButton
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
 } from '@ionic/react';
 import NewsCard from '../../components/NewsCard';
-import { newsArticles } from '../../assets/content/news/content';
+import { newsArticles } from '../../assets/content';
+import Toolbar from '../../components/Toolbar';
 
 type Props = { props: any };
 type State = { articles: Array<any>, segment: string};
@@ -18,29 +16,22 @@ class News extends React.Component<Props, State> {
   constructor(props: any) {
     super(props);
     this.routeLink = "";
-  }
+  };
   handleClick(id: string) {
     console.log("id", id);
     this.routeLink = "/news/" + id;
     console.log("this.routeLink", this.routeLink);
-  }
+  };
   render() {
     return (
       <IonPage>
         <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonBackButton />
-            </IonButtons>
-            <IonTitle>News</IonTitle>
-          </IonToolbar>
+          <Toolbar title="News" page="news" btn="settings" />
         </IonHeader>
         <IonContent>
           {newsArticles.map((article: any) => 
-            // <NewsCard title={article.title} date={article.date} id={article.id}
-            //           content={article.content}></NewsCard>
             <NewsCard article={article}></NewsCard>
-          )}
+          )};
         </IonContent>
       </IonPage>
     );

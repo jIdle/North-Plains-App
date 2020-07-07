@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import News from './pages/News/News';
 import NewsArticle from './pages/News/NewsArticle';
 import Settings from './pages/Settings';
+import ParksPage from './pages/Parks/ParksPage';
+import ParkDetail from './pages/Parks/ParkDetail';
 // Testing imports
 import { GridExample } from './test/grid';
 
@@ -31,16 +33,17 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import './theme/App.css';
 
 // Add custom property 'apphistory' to the global window object
 // https://github.com/ionic-team/ionic/issues/20297
 declare global {
   interface Window { appHistory: History }
-}
+};
 
 const App: React.FC = () => {
   // Store the history object globally so we can access it outside of React components
-  window.appHistory = useHistory()
+  window.appHistory = useHistory();
   return (
     <IonApp>
       <IonReactRouter>
@@ -49,6 +52,9 @@ const App: React.FC = () => {
           <Route path="/news" component={News} exact={true} />
           <Route path="/news/:id" component={NewsArticle} exact={true} />
           <Route path="/settings" component={Settings} exact={true} />
+          <Route path="/parks" component={ParksPage} exact={true} />
+          <Route path="/parks/:id" component={ParkDetail} exact={true} />
+          {/* <Route path="/" render={() => <Redirect to="/parks" />} exact={true} /> */}
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
           {/* Grid test */}
           {/* <Route path="/test" component={GridExample} exact={true} />
@@ -56,7 +62,7 @@ const App: React.FC = () => {
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
-  )
+  );
 };
 
 export default App;

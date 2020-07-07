@@ -1,6 +1,6 @@
 // Test data
 // import newsItems from '../../test/newsItems.js';
-export const newsArticles = [
+const newsArticles = [
   {
     title: "COVID-19 Emergency Declaration extended through September 30, 2020",
     date: "Monday, June 15",
@@ -14,6 +14,33 @@ export const newsArticles = [
     id: "5",
     content: '<div class="main" role="main"> <!-- <div class="above-content-wrapper"> --><!--</div> --> <div class="content-outer-border"><div class="content-inner-border"> <a id="main-content"></a> <div class="title-wrapper"><h1 id="page-title">Limited Business Hours for City Hall</h1></div> <div class="region region-content"> <div id="block-system-main" class="block block-system"> <div class="block-header"> </div> <div class="block-content"> <div id="node-790711" class="node node-page clearfix" about="/cityhall/page/limited-business-hours-city-hall" typeof="sioc:Item foaf:Document"> <span property="dc:title" content="Limited Business Hours for City Hall" class="rdf-meta element-hidden"></span> <div class="content_main"><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>North Plains City Hall will open to the public on <strong>June 15</strong> for limited business hours while Washington County remains in Phase I. Initially, the public may interact with staff in-person on Monday/Wednesday from 10 AM – 2 PM for routine business matters such as utility account questions, permits, etc. Only one person/family will be allowed&nbsp;in the front lobby area.&nbsp;</p><p><strong>Staff will require that longer in-person meetings are arranged by appointment only; no walk-ins.</strong> The front door will remain locked - including during the in-person business hours noted above - except for pre-arranged business meetings. All&nbsp;visitors&nbsp;are expected to follow CDC public guidelines such as social distancing, and the use of face masks is recommended.</p><p>Residents and businesses are still encouraged to do their business over the phone or online when possible; see below for contact information. Payments may be made by using the dropbox located on the front of the building on Commercial Street.</p><p>All other City buildings and playgrounds remain closed to the general public until further notice.</p><p>This policy will be reviewed in two weeks.</p><p>*********************************</p><h2><strong>Horario comercial limitado para el ayuntamiento</strong></h2><p>North Plains City Hall abrirá al público el <strong>15 de junio</strong> para horarios comerciales limitados mientras el condado de Washington permanece en la Fase I. Inicialmente, el público puede interactuar con el personal en persona de lunes a miércoles de 10 a. m. a 2 p. m. para asuntos comerciales de rutina, como preguntas de cuentas de servicios públicos, permisos, etc. Solo se permitirá una persona/familia en la zona del vestíbulo principal.&nbsp;</p><p><strong>El personal exigirá que las reuniones presencias más largas se organice únicamente con cita previa; no hay walk-ins.</strong> La puerta principal permanecerá cerrada con llave, incluso durante el horario comercial en persona mencionado anteriormente - excepto para reuniones de negocios pre-concertadas. Se espera que todos los visitantes sigan las pautas públicas de los CDC, como el distanciamiento social, y se recomienda el uso de máscaras faciales.</p><p>Los residentes y las empresas todavía se animan a hacer su negocio por teléfono o en línea cuando sea posible; ver más abajo para obtener información de contacto. Los pagos se pueden realizar utilizando el buzón situado en la parte delantera del edificio en Commercial Street.</p><p>Todos los demás edificios y parques infantiles de la ciudad permanecen cerrados al público en general hasta nuevo aviso.</p><p>Esta política se revisará en dos semanas.</p></div></div></div><div style="clear:both;"></div> <div class="link-wrapper"> <ul class="links inline"><li class="print_html first last"><a href="/print/790711" title="Display a printer-friendly version of this page." class="print-page" onclick="window.open(this.href); return false" rel="nofollow"><img class="print-icon" typeof="foaf:Image" src="https://www.northplains.org/sites/all/modules/print/icons/print_icon.png" alt="Printer-friendly version" title="Printer-friendly version" width="16" height="16"></a></li></ul> </div> </div> </div> </div></div> </div> </div></div></div>'
   }
-]
+];
 
-export default newsArticles;
+const parks = [
+  {
+    id: "community-garden",
+    name: "Community Garden",
+    desc: "The Community Garden was started in 2012 thanks to donations of a lease by Robinson Floral and materials from various companies and groups. It is located on Commercial Street across from Fire Station 17.\nPlots are aluminum troughs that measure two feet wide by six feet long. There is a $15 annual fee. Water is included.\nAll community members are encouraged to enjoy the space for picnic.\nTo reserve a space please call 503.647.5555.",
+    address: "31360 nw commercial st, North Plains, or 97133"
+  },
+  {
+    id: "frank-wing-park",
+    name: "Frank Wing Park",
+    desc: "Adjacent to the water tank, the park features picnic tables, benches and portable toilet.\nFrank Wing was instrumental in the development of North Plains, having assisted with the construction of streets and houses throughout the community.  Many members of the Wing family continue to live in North Plains.",
+    address: "32150 NW Commercial St, North Plains, OR 97133"
+  },
+  {
+    id: "jessie-mays-community-park",
+    name: "Jessie Mays Community Park",
+    desc: "The largest of North Plains parks, it is a hub of community activities from dances and concerts to tennis, basketball, and baseball.  It is the site of the annual Elephant Garlic Festival.  A playground with slides and swings invites kids of all ages to play.\nThe Community Hall is used for private and public events.  Most City events including the annual Chili Cook-off, Ice Cream Social and Volunteer Recognition Night are at the Hall.",
+    address: "30975 NW Hillcrest Street North Plains, OR 97133"
+  },
+  {
+    id: "lamordden-park",
+    name: "LaMordden Park",
+    desc: "Named after a former the former the LaMordden family who have been active in our community for decades.  This small park has the town's only water feature for play in the summer.  It features a natural play area, benches and picnic tables.   Located on curtis Street between Pacific and Highland Court to the east of Glencoe Road.",
+    address: "10120 NW Curtis Street North Plains, OR 97133"
+  }
+];
+
+export { newsArticles, parks };

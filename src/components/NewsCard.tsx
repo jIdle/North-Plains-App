@@ -12,7 +12,7 @@ type Props = {
   // date: string,
   // id: string,
   // content: string
-}
+};
 
 class NewsCard extends React.Component<Props> {
 
@@ -38,7 +38,7 @@ class NewsCard extends React.Component<Props> {
         </IonCardHeader>
       </IonCard>
     );
-  }
-}
+  };
+};
 
 export default NewsCard;

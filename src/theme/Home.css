@@ -1,26 +1,5 @@
 body {
-  /* background-color: blue; */
   min-height: 100%;
-}
-ion-content {
-  background-color: #2b4c9b;
-}
-
-
-.titleicon {
-  /* Fixed size of title icon in toolbar to get good image display.
-  (Toolbar is 56px tall so default to 56px.) */
-  height: 56px;
-}
-
-.title {
-  /* Controls how close the homepage title is to the icon */
-  padding-left: 5px;
-}
-
-.settings {
-  /* Push settings button to right */
-  margin: 0 auto;
 }
 
 .image-slides {
@@ -54,13 +33,14 @@ ion-col {
 
 /* Slides containing buttons stretch to bottom */
 .slides-buttons-container {
-  /* Need to calculate height to push paginator to bottom and
+  /* Calculate height to push paginator to bottom and
   color the slides that the buttons are on */
   height: calc(100vh - 56px - 25vh);
   background-color: #2b4c9b;
 }
 
 .slide-grid {
+  /* TODO: Trying to position grid within slides higher (not working) */
   position: absolute;
   /* position: relative; */
   top: 0%;

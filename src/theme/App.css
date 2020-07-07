@@ -1,0 +1,13 @@
+ion-thumbnail {
+  /* Fixed size of title icon in toolbar to get good image display.
+  (Toolbar is 56px tall so default to 56px.) */
+  height: 56px;
+  /* Code below is stretching toolbar to 61.08px.
+  Woule be nice to auto height tho */
+  /* height: auto; */
+}
+
+.header-title {
+  /* Controls how close title is to left object */
+  padding-left: 5px;
+}

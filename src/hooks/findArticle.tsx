@@ -1,11 +1,11 @@
-import { newsArticles } from '../assets/content/news/content';
+import { newsArticles } from '../assets/content';
 
-export interface Article {
-  title: string,
-  date: string,
-  id: string,
-  content: string
-}
+// export interface Article {
+//   title: string,
+//   date: string,
+//   id: string,
+//   content: string
+// };
 
 export function findArticle(id: string) {
 
@@ -13,5 +13,5 @@ export function findArticle(id: string) {
 
   return {
     found
-  }
-}
+  };
+};

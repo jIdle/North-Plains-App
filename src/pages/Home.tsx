@@ -37,7 +37,8 @@ import {
   desktopOutline,
 } from 'ionicons/icons'
 import React from 'react';
-import './Home.css';
+import '../theme/Home.css';
+import Toolbar from '../components/Toolbar';
 
 type Image = {
   src: string;
@@ -66,26 +67,20 @@ const images: Image[] = [
   //   src: 'https://www.northplains.org/sites/all/themes/aha_compass/images/background/inner-body-bg.jpg',
   //   text: ''
   // }
-]
+];
 
 const slideOpts = {
   initialSlide: 1,
   speed: 400,
   autoHeight: true
-}
+};
 
 const Home: React.FC = () => {
 // class Home extends React.Component {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonButton className="settings" routerLink="/settings" slot="primary" fill="clear"><IonIcon icon={settingsOutline}></IonIcon></IonButton>
-          <IonThumbnail slot="start">
-            <IonImg className="titleicon" src="https://www.northplains.org/sites/all/themes/aha_compass/logo.png" />
-          </IonThumbnail>
-          <IonTitle className="title">North Plains</IonTitle>
-        </IonToolbar>
+        <Toolbar title="North Plains" page="home" btn="settings" />
       </IonHeader>
       <IonContent>
         <IonImg className="home-image" src={images[0].src} />
@@ -109,7 +104,7 @@ const Home: React.FC = () => {
               <IonRow className="ion-text-center">
                 <IonCol><IonButton className="menu-button" routerLink="/news" fill="clear"><IonIcon icon={newspaperOutline} /></IonButton><br />News</IonCol>
                 <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={calendarOutline} /></IonButton><br />Calendar</IonCol>
-                <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={leafOutline} /></IonButton><br />Parks</IonCol>
+                <IonCol><IonButton className="menu-button" routerLink="/parks" fill="clear"><IonIcon icon={leafOutline} /></IonButton><br />Parks</IonCol>
               </IonRow>
               <IonRow className="ion-text-center">
                 <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={walkOutline} /></IonButton><br />Community Events</IonCol>
