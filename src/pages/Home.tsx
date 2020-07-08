@@ -26,15 +26,25 @@ import './Home.css';
 
 const Home: React.FC = () => {
   const slidesRef = useRef(document.createElement('ion-slides'))
+  var checkSlideStuck = -1
   const AutoPlay = () => {
+    slidesRef.current.getActiveIndex().then((value) => {
+      if(checkSlideStuck == value) {
+        window.location.reload(true)
+      } else {
+        checkSlideStuck = value
+      }
+    })
     slidesRef.current.lockSwipes(true)
     setTimeout(() => {
       slidesRef.current.lockSwipes(false)
       slidesRef.current.isEnd().then((value) => {
         if(value) {
           slidesRef.current.slideTo(0)
+          slidesRef.current.lockSwipes(true)
         } else {
           slidesRef.current.slideNext()
+          slidesRef.current.lockSwipes(true)
         }
       })
     }, 5000)
@@ -65,7 +75,7 @@ const Home: React.FC = () => {
       <IonFooter>
         <IonSlides>
           <IonSlide>
-            <IonGrid class="blue">
+            <IonGrid>
               <IonRow class="ion-text-center">
                 <IonCol><IonButton><IonIcon icon={batteryFullOutline}/></IonButton></IonCol>
                 <IonCol><IonButton><IonIcon icon={musicalNoteOutline}/></IonButton></IonCol>
