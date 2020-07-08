@@ -47,7 +47,7 @@ const Home: React.FC = () => {
           slidesRef.current.lockSwipes(true)
         }
       })
-    }, 5000)
+    }, 7000)
   }
   return (
     <IonPage>
@@ -56,19 +56,19 @@ const Home: React.FC = () => {
           <IonTitle>North Plains</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
+      <IonContent class="no-scroll">
         <IonSlides onIonSlidesDidLoad={() => AutoPlay()} onIonSlideTransitionEnd={() => AutoPlay()} ref={slidesRef}>
           <IonSlide>
-            <IonImg src={'https://icatcare.org/app/uploads/2018/09/Scottish-fold.png'}/>
+            <IonImg src={require('./../assets/img/slideshow/Cat1.png')}/>
           </IonSlide>
           <IonSlide>
-            <IonImg src={'https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/08/kitten-440379.jpg'}/>
+            <IonImg src={require('./../assets/img/slideshow/Cat2.png')}/>
           </IonSlide>
           <IonSlide>
-            <IonImg src={'https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/06/cat-217679.jpg'}/>
+            <IonImg src={require('./../assets/img/slideshow/Cat3.png')}/>
           </IonSlide>
           <IonSlide>
-            <IonImg src={'https://cdn.britannica.com/67/197567-050-DA8E36D5/Scottish-fold-cat-feline.jpg'}/>
+            <IonImg src={require('./../assets/img/slideshow/Cat4.png')}/>
           </IonSlide>
         </IonSlides>
       </IonContent>
