@@ -2,14 +2,18 @@ body {
   min-height: 100%;
 }
 
+.no-scroll {
+  --overflow: hidden;
+}
+
 .image-slides {
-  height: 25vh;
+  height: 30vh;
   object-fit: cover;
 }
 
 .home-image {
   /* Set height to predictably stretch the buttons slide to bottom */
-  height: 25vh;
+  height: 30vh;
   object-fit: cover;
 }
 
@@ -35,15 +39,15 @@ ion-col {
 .slides-buttons-container {
   /* Calculate height to push paginator to bottom and
   color the slides that the buttons are on */
-  height: calc(100vh - 56px - 25vh);
+  height: calc(100vh - 56px - 30vh);
   background-color: #2b4c9b;
 }
 
 .slide-grid {
   /* TODO: Trying to position grid within slides higher (not working) */
-  position: absolute;
+  /* position: absolute; */
   /* position: relative; */
-  top: 0%;
+  /* top: 0%; */
 }
 
 /* Align buttons */

@@ -78,20 +78,41 @@ const slideOpts = {
 };
 
 const Home: React.FC = () => {
+
+  let state = 0
   const slidesRef = useRef(document.createElement('ion-slides'))
-  const AutoPlay = () => {
+  let checkSlideStuck = -1
+
+  const AutoPlay = (num: number) => {
+    console.log("num", num)
+    if (num == 1) {
+      state = 1
+    }
+    if (num == 2 && state == 0) { return }
+    slidesRef.current.getActiveIndex().then((value) => {
+      if(checkSlideStuck == value) {
+        console.log("checkSlideStuck\n****************\n*************")
+        window.location.reload(true)
+      } else {
+        console.log("autoplay value", value)
+        checkSlideStuck = value
+      }
+    })
     slidesRef.current.lockSwipes(true)
     setTimeout(() => {
       slidesRef.current.lockSwipes(false)
       slidesRef.current.isEnd().then((value) => {
         if(value) {
           slidesRef.current.slideTo(0)
+          slidesRef.current.lockSwipes(true)
         } else {
           slidesRef.current.slideNext()
+          slidesRef.current.lockSwipes(true)
         }
       })
-    }, 5000)
+    }, 7000)
   }
+
   return (
     <IonPage>
       <IonHeader>
@@ -99,22 +120,20 @@ const Home: React.FC = () => {
       </IonHeader>
       <IonContent>
         {/* <IonImg className="home-image" src={images[0].src} /> */}
-        <IonSlides className="image-slides" onIonSlidesDidLoad={() => AutoPlay()} onIonSlideTransitionEnd={() => AutoPlay()} ref={slidesRef}>
+        <IonSlides className="image-slides" onIonSlidesDidLoad={() => AutoPlay(1)} onIonSlideTransitionEnd={() => AutoPlay(2)} ref={slidesRef}>
           <IonSlide>
-            <IonImg src={'https://icatcare.org/app/uploads/2018/09/Scottish-fold.png'}/>
+            <IonImg src={require('./../assets/img/slideshow/Cat1.png')}/>
           </IonSlide>
           <IonSlide>
-            <IonImg src={'https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/08/kitten-440379.jpg'}/>
+            <IonImg src={require('./../assets/img/slideshow/Cat2.png')}/>
           </IonSlide>
           <IonSlide>
-            <IonImg src={'https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/06/cat-217679.jpg'}/>
+            <IonImg src={require('./../assets/img/slideshow/Cat3.png')}/>
           </IonSlide>
           <IonSlide>
-            <IonImg src={'https://cdn.britannica.com/67/197567-050-DA8E36D5/Scottish-fold-cat-feline.jpg'}/>
+            <IonImg src={require('./../assets/img/slideshow/Cat4.png')}/>
           </IonSlide>
         </IonSlides>
-      </IonContent>
-      <IonFooter>
         <IonSlides pager={true} className="slides-buttons-container">
           <IonSlide>
             <IonGrid>
@@ -162,8 +181,7 @@ const Home: React.FC = () => {
             </IonGrid>
           </IonSlide>
         </IonSlides>
-      {/* </IonContent> */}
-      </IonFooter>
+      </IonContent>
     </IonPage>
   );
 };
