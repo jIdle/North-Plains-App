@@ -5,7 +5,8 @@ import {
   IonButtons,
   IonBackButton,
   IonThumbnail,
-  IonImg
+  IonImg,
+  IonHeader
 } from '@ionic/react';
 import ToolbarBtn from './ToolbarBtn';
 
@@ -20,7 +21,7 @@ const Banner = (page: string) => {
   if (page == "home") {
     return (
       <IonThumbnail slot="start">
-        <IonImg className="titleicon" src="https://www.northplains.org/sites/all/themes/aha_compass/logo.png" />
+        <IonImg className="title-icon" src="https://www.northplains.org/sites/all/themes/aha_compass/logo.png" />
       </IonThumbnail>
     )
   }
@@ -34,14 +35,14 @@ const Banner = (page: string) => {
  */
 const Toolbar = (props: Props) => {
   return (
-    <IonToolbar>
-      <ToolbarBtn btn={props.btn} />
-      <IonButtons slot="start">
-        <IonBackButton />
-      </IonButtons>
-      {Banner(props.page)}
-      <IonTitle className="header-title">{props.title}</IonTitle>
-    </IonToolbar>
+      <IonToolbar className="toolbar-container">
+        <ToolbarBtn btn={props.btn} />
+        <IonButtons slot="start">
+          <IonBackButton />
+        </IonButtons>
+        {Banner(props.page)}
+        <IonTitle className="header-title">{props.title}</IonTitle>
+      </IonToolbar>
   )
 }
 

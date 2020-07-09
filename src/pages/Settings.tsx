@@ -8,10 +8,6 @@ import { get, set } from '../services/storage';
 import {
   IonPage,
   IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonButtons,
-  IonBackButton,
   IonContent,
   IonList,
   IonItemDivider,
@@ -21,16 +17,15 @@ import {
   withIonLifeCycle
 } from '@ionic/react'
 
+import Toolbar from '../components/Toolbar';
+
 type Props = { props: any };
 type State = { notifications: Array<any> };
 
-// const Settings: React.FC = () => {
 class Settings extends React.Component<Props, State> {
   testValue: any;
 
-  // ionViewDidEnter() {
-  //   console.log("ionViewDidEnter()");
-  // }
+  // TODO: Need to fetch settings
   async ionViewDidEnter() {
     if (get("NotificationNews") == null) {
       console.log("NULL")
@@ -42,39 +37,17 @@ class Settings extends React.Component<Props, State> {
 
   render() {
     return (
-      // <IonPage>
-      //   <IonHeader>
-      //     <IonToolbar>
-      //       <IonButtons slot="start">
-      //         <IonBackButton />
-      //       </IonButtons>
-      //       <IonTitle className="title">Settings</IonTitle>
-      //     </IonToolbar>
-      //   </IonHeader>
-      //   <IonContent>
-
-      //   </IonContent>
-
-
-      // </IonPage>
       <IonPage>
         <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonBackButton />
-            </IonButtons>
-            <IonTitle>Settings</IonTitle>
-          </IonToolbar>
+          <Toolbar title="Settings" page="settings" btn="none" />
         </IonHeader>
         <IonContent>
           <IonList>
-
             <IonItemDivider>Notifications</IonItemDivider>
             <IonItem>
               <IonLabel>News: {this.testValue}</IonLabel>
               <IonToggle checked={this.testValue} onIonChange={e => set("myValue", e.detail.checked)} />
             </IonItem>
-
           </IonList>
         </IonContent>
       </IonPage>

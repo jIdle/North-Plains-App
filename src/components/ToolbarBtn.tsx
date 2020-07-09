@@ -28,12 +28,9 @@ const ToolbarBtn = (props: Props) => {
   console.log("ToolbarBtn", props)
   if (props.btn == "settings") {
     return ( <SettingsBtn /> )
-  }
-  else if (props.btn == "share") {
+  } else if (props.btn == "share") {
     return ( <ShareBtn /> )
-  }
-  // catch the rest
-  else {
+  } else { // catch the rest
     return (<></>)
   }
 }

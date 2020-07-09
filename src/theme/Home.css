@@ -2,6 +2,14 @@ body {
   min-height: 100%;
 }
 
+.toolbar-container {
+  height: 8vh;
+}
+
+.title-icon {
+  height: 8vh;
+}
+
 .no-scroll {
   --overflow: hidden;
 }
@@ -39,7 +47,7 @@ ion-col {
 .slides-buttons-container {
   /* Calculate height to push paginator to bottom and
   color the slides that the buttons are on */
-  height: calc(100vh - 56px - 30vh);
+  height: calc(100vh - 8vh - 30vh);
   background-color: #2b4c9b;
 }
 

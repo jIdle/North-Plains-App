@@ -50,10 +50,10 @@ const App: React.FC = () => {
         <IonRouterOutlet>
           <Route path="/home" component={Home} exact={true} />
           <Route path="/news" component={News} exact={true} />
-          <Route path="/news/:id" component={NewsArticle} exact={true} />
+          <Route path="/news/:id" component={NewsArticle} />
           <Route path="/settings" component={Settings} exact={true} />
           <Route path="/parks" component={ParksPage} exact={true} />
-          <Route path="/parks/:id" component={ParkDetail} exact={true} />
+          <Route path="/parks/:id" component={ParkDetail} />
           {/* <Route path="/" render={() => <Redirect to="/parks" />} exact={true} /> */}
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
           {/* Grid test */}
