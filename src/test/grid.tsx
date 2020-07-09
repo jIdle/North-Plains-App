@@ -165,10 +165,10 @@ export const GridExample: React.FC = () => (
       </IonRow>
     </IonGrid> */}
 
-    {/* Auto-layout columns */}
+    <h2>Auto-layout columns</h2>
 
-    {/* Equal-width */}
-    {/* <IonGrid>
+    <h3>Equal-width</h3>
+    <IonGrid>
       <IonRow>
         <IonCol>
           <div>
@@ -198,10 +198,10 @@ export const GridExample: React.FC = () => (
           </div>
         </IonCol>
       </IonRow>
-    </IonGrid> */}
+    </IonGrid>
 
-    {/* Setting one column width */}
-    {/* <IonGrid>
+    <h3>Setting one column width</h3>
+    <IonGrid>
       <IonRow>
         <IonCol>
           <div>
@@ -236,10 +236,10 @@ export const GridExample: React.FC = () => (
           </div>
         </IonCol>
       </IonRow>
-    </IonGrid> */}
+    </IonGrid>
 
-    {/* Variable-width */}
-    {/* <IonGrid>
+    <h3>Variable-width</h3>
+    <IonGrid>
       <IonRow>
         <IonCol>
           <div>
@@ -279,12 +279,12 @@ export const GridExample: React.FC = () => (
           </div>
         </IonCol>
       </IonRow>
-    </IonGrid> */}
+    </IonGrid>
 
-    {/* Responsive */}
+    <h2>Responsive</h2>
 
-    {/* All breakpoints  */}
-    {/* <IonGrid>
+    <h3>All breakpoints</h3>
+    <IonGrid>
       <IonRow>
         <IonCol size="4">
           <div>
@@ -307,13 +307,13 @@ export const GridExample: React.FC = () => (
           </div>
         </IonCol>
       </IonRow>
-    </IonGrid> */}
+    </IonGrid>
     
-    {/* Stacked to horizontal */}
+    <h3>Stacked to horizontal</h3>
     {/* Note:
     This:         <IonCol size="12" sizeSm="true">
     Needs to be:  <IonCol size="12" sizeSm="true"> */}
-    {/* <IonGrid>
+    <IonGrid>
       <IonRow>
         <IonCol className="ion-align-items-end" size="12" sizeSm="true">
           <div>
@@ -336,7 +336,7 @@ export const GridExample: React.FC = () => (
           </div>
         </IonCol>
       </IonRow>
-    </IonGrid> */}
+    </IonGrid>
 
     <h2>Reordering</h2>
 
@@ -376,7 +376,6 @@ export const GridExample: React.FC = () => (
       </IonRow>
     </IonGrid>
 
-    {/* Push and pull */}
     <h3>Push and pull</h3>
     <IonGrid>
       <IonRow>

@@ -11,6 +11,7 @@ import ParksPage from './pages/Parks/ParksPage';
 import ParkDetail from './pages/Parks/ParkDetail';
 // Testing imports
 import { GridExample } from './test/grid';
+import { LabelExample } from './test/button';
 
 import { History } from 'history';
 import { useHistory } from 'react-router';
@@ -55,10 +56,11 @@ const App: React.FC = () => {
           <Route path="/parks" component={ParksPage} exact={true} />
           <Route path="/parks/:id" component={ParkDetail} />
           {/* <Route path="/" render={() => <Redirect to="/parks" />} exact={true} /> */}
+          <Route path="/buttons" component={LabelExample} />
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
           {/* Grid test */}
-          {/* <Route path="/test" component={GridExample} exact={true} />
-          <Route path="/" render={() => <Redirect to="/test" />} exact={true} /> */}
+          <Route path="/test" component={GridExample} exact={true} />
+          {/* <Route path="/" render={() => <Redirect to="/test" />} exact={true} /> */}
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
