@@ -47,30 +47,6 @@ type Image = {
   text: string;
 };
 
-// Images for the slideshow
-const images: Image[] = [
-  {
-    src: 'https://www.northplains.org/sites/all/themes/aha_compass/images/background/bg1.jpg',
-    text: ''
-  },
-  {
-    src: 'https://www.northplains.org/sites/all/themes/aha_compass/images/background/bg2.jpg',
-    text: ''
-  },
-  {
-    src: 'https://www.northplains.org/sites/all/themes/aha_compass/images/background/bg3.jpg',
-    text: ''
-  },
-  {
-    src: 'https://www.northplains.org/sites/all/themes/aha_compass/images/background/bg4.jpg',
-    text: ''
-  }
-  // {
-  //   src: 'https://www.northplains.org/sites/all/themes/aha_compass/images/background/inner-body-bg.jpg',
-  //   text: ''
-  // }
-];
-
 const slideOpts = {
   initialSlide: 1,
   speed: 400,
@@ -122,16 +98,16 @@ const Home: React.FC = () => {
         {/* <IonImg className="home-image" src={images[0].src} /> */}
         <IonSlides className="image-slides" onIonSlidesDidLoad={() => AutoPlay(1)} onIonSlideTransitionEnd={() => AutoPlay(2)} ref={slidesRef}>
           <IonSlide>
-            <IonImg src={require('./../assets/img/slideshow/Cat1.png')}/>
+            <IonImg className="image-slides" src={require('../assets/img/bg/bg1.jpg')}/>
           </IonSlide>
           <IonSlide>
-            <IonImg src={require('./../assets/img/slideshow/Cat2.png')}/>
+            <IonImg className="image-slides" src={require('../assets/img/bg/bg2.jpg')}/>
           </IonSlide>
           <IonSlide>
-            <IonImg src={require('./../assets/img/slideshow/Cat3.png')}/>
+            <IonImg className="image-slides" src={require('../assets/img/bg/bg3.jpg')}/>
           </IonSlide>
           <IonSlide>
-            <IonImg src={require('./../assets/img/slideshow/Cat4.png')}/>
+            <IonImg className="image-slides" src={require('../assets/img/bg/bg4.jpg')}/>
           </IonSlide>
         </IonSlides>
         <IonSlides pager={true} className="slides-buttons-container">
