@@ -12,7 +12,7 @@ const ParksPage: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <Toolbar title="Parks" page="parks" btn="share" />
+        <Toolbar title="Parks" page="parks" btn="settings" />
       </IonHeader>
       <IonContent>
         {parks.map((park: any) =>

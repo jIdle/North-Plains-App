@@ -3,10 +3,14 @@ import { useParams } from 'react-router-dom';
 import {
   IonPage,
   IonHeader,
-  IonContent
+  IonContent,
+  IonItem,
+  IonIcon
 } from '@ionic/react';
+import { locationOutline } from 'ionicons/icons';
 import { findPark } from '../../hooks/findPark';
 import Toolbar from '../../components/Toolbar';
+import './ParkDetail.css';
 
 // type Props = {
 //   park: any;
@@ -24,9 +28,10 @@ const ParkDetail: React.FC = () => {
         <Toolbar title="Parks" page="parkDetail" btn="share" />
       </IonHeader>
       <IonContent>
-        <h1>{found.name}</h1>
-        <p>{found.address}</p>
-        <p>{found.desc}</p>
+        <div className="map-embed" dangerouslySetInnerHTML={{ __html: found.embed }} ></div>
+        <IonItem color="medium">{found.name}</IonItem>
+        <IonItem detail={false} href={found.link}><IonIcon icon={locationOutline} />{found.address}</IonItem>
+        <IonItem lines="none"><div dangerouslySetInnerHTML={{ __html: found.desc }} /></IonItem>
       </IonContent>
     </IonPage>
   );
