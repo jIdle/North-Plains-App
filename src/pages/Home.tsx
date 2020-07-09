@@ -76,7 +76,6 @@ const slideOpts = {
 };
 
 const Home: React.FC = () => {
-// class Home extends React.Component {
   return (
     <IonPage>
       <IonHeader>
@@ -84,17 +83,9 @@ const Home: React.FC = () => {
       </IonHeader>
       <IonContent>
         <IonImg className="home-image" src={images[0].src} />
-        {/* <IonSlides className="image-slides">
-          {images.map((image) => (
-            <IonSlide>
-              <IonImg src={image.src} />
-            </IonSlide>
-          ))}
-        </IonSlides> */}
 
         <IonSlides pager={true} className="slides-buttons-container">
           <IonSlide>
-            {/* <IonGrid className="slide-grid"> */}
             <IonGrid>
               <IonRow className="ion-text-center">
                 <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={play} /></IonButton><br />Welcome</IonCol>
