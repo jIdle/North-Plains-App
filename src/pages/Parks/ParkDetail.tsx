@@ -30,8 +30,8 @@ const ParkDetail: React.FC = () => {
       <IonContent>
         <div className="map-embed" dangerouslySetInnerHTML={{ __html: found.embed }} ></div>
         <IonItem color="medium">{found.name}</IonItem>
-        <IonItem detail={false} href={found.link}><IonIcon icon={locationOutline} />{found.address}</IonItem>
-        <IonItem lines="none"><div dangerouslySetInnerHTML={{ __html: found.desc }} /></IonItem>
+        <IonItem detail={false} href={found.link}><IonIcon icon={locationOutline} /><p>{found.address}</p></IonItem>
+        <IonItem lines="none"><p>{found.desc}</p></IonItem>
       </IonContent>
     </IonPage>
   );

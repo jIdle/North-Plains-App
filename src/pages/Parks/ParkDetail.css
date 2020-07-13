@@ -1,7 +1,11 @@
-ion-item {
-  /* font-size: 12pt; */
-}
+/* ParkDetail.css */
 
+/* Set map embed height */
 .map-embed {
   height: 30vh;
+}
+
+/* Read '\n' as newline https://stackoverflow.com/q/39325414/9041943 */
+p {
+  white-space: pre-line;
 }
