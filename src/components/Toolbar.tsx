@@ -6,7 +6,6 @@ import {
   IonBackButton,
   IonThumbnail,
   IonImg,
-  IonHeader
 } from '@ionic/react';
 import ToolbarBtn from './ToolbarBtn';
 
@@ -18,7 +17,7 @@ type Props = {
 
 // Only display the city banner if we are on the homepage
 const Banner = (page: string) => {
-  if (page == "home") {
+  if (page === "home") {
     return (
       <IonThumbnail slot="start">
         <IonImg className="title-icon" src="https://www.northplains.org/sites/all/themes/aha_compass/logo.png" />

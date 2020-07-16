@@ -2,8 +2,6 @@ import {
   IonContent,
   IonHeader,
   IonPage,
-  IonTitle,
-  IonToolbar,
   IonGrid,
   IonRow,
   IonCol,
@@ -12,11 +10,8 @@ import {
   IonSlides,
   IonSlide,
   IonImg,
-  IonThumbnail,
-  IonFooter
 } from '@ionic/react';
 import {
-  settingsOutline,
   play,
   notifications,
   cardOutline,
@@ -47,12 +42,6 @@ type Image = {
   text: string;
 };
 
-const slideOpts = {
-  initialSlide: 1,
-  speed: 400,
-  autoHeight: true
-};
-
 const Home: React.FC = () => {
 
   let state = 0
@@ -61,12 +50,12 @@ const Home: React.FC = () => {
 
   const AutoPlay = (num: number) => {
     console.log("num", num)
-    if (num == 1) {
+    if (num === 1) {
       state = 1
     }
-    if (num == 2 && state == 0) { return }
+    if (num === 2 && state === 0) { return }
     slidesRef.current.getActiveIndex().then((value) => {
-      if(checkSlideStuck == value) {
+      if(checkSlideStuck === value) {
         console.log("checkSlideStuck\n****************\n*************")
         window.location.reload(true)
       } else {

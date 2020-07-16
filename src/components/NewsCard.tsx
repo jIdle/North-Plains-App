@@ -7,7 +7,7 @@ import {
 } from '@ionic/react';
 
 type Props = {
-  article: any
+  article: any;
   // title: string,
   // date: string,
   // id: string,
@@ -15,18 +15,10 @@ type Props = {
 };
 
 class NewsCard extends React.Component<Props> {
-
-  // constructor(props: Props) {
-  //   super(props);
-  //   this.routeLink = "/news/" + this.props.article.id;
-  // }
   routeLink: string = "/news/" + this.props.article.id;
 
   render() {
-    console.log("this.props.article", this.props.article)
     return (
-      // <IonCard onClick={() => console.log("routeLink="+this.routeLink)} 
-      //         title={this.props.article.title} id={this.props.article.id} routerLink={this.routeLink}>
       <IonCard title={this.props.article.title} id={this.props.article.id} routerLink={this.routeLink}>
         <IonCardHeader>
           <IonCardSubtitle>

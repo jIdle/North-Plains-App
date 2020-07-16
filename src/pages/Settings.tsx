@@ -1,7 +1,7 @@
 // Toggle usage:  https://ionicframework.com/docs/api/toggle#usage
 // Need to find out how to set initial settings
 
-import React, { useState } from 'react';
+import React from 'react';
 
 import { get, set } from '../services/storage';
 
