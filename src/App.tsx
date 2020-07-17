@@ -9,6 +9,7 @@ import NewsArticle from './pages/News/NewsArticle';
 import Settings from './pages/Settings';
 import ParksPage from './pages/Parks/ParksPage';
 import ParkDetail from './pages/Parks/ParkDetail';
+import CityCouncil from './pages/CityCouncil/CityCouncil';
 // Testing imports
 import { GridExample } from './test/grid';
 
@@ -54,6 +55,7 @@ const App: React.FC = () => {
           <Route path="/settings" component={Settings} exact={true} />
           <Route path="/parks" component={ParksPage} exact={true} />
           <Route path="/parks/:id" component={ParkDetail} exact={true} />
+          <Route path="/citycouncil" component={CityCouncil} exact={true} />
           {/* <Route path="/" render={() => <Redirect to="/parks" />} exact={true} /> */}
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
           {/* Grid test */}

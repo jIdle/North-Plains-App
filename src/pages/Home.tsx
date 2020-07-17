@@ -60,17 +60,14 @@ const Home: React.FC = () => {
   let checkSlideStuck = -1
 
   const AutoPlay = (num: number) => {
-    console.log("num", num)
     if (num == 1) {
       state = 1
     }
     if (num == 2 && state == 0) { return }
     slidesRef.current.getActiveIndex().then((value) => {
       if(checkSlideStuck == value) {
-        console.log("checkSlideStuck\n****************\n*************")
         window.location.reload(true)
       } else {
-        console.log("autoplay value", value)
         checkSlideStuck = value
       }
     })
@@ -126,7 +123,7 @@ const Home: React.FC = () => {
               <IonRow className="ion-text-center">
                 <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={walkOutline} /></IonButton><br />Community Events</IonCol>
                 <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={bookOutline} /></IonButton><br />City Library</IonCol>
-                <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={peopleOutline} /></IonButton><br />City Council</IonCol>
+                <IonCol><IonButton className="menu-button" routerLink="/citycouncil" fill="clear"><IonIcon icon={peopleOutline} /></IonButton><br />City Council</IonCol>
               </IonRow>
             </IonGrid>
           </IonSlide>
