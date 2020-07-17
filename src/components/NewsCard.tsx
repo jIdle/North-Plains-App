@@ -11,26 +11,30 @@ type Props = {
   // title: string,
   // date: string,
   // id: string,
-  // content: string
+  // body: string
 };
 
-class NewsCard extends React.Component<Props> {
-  routeLink: string = "/news/" + this.props.article.id;
+// class NewsCard extends React.Component<Props> {
+const NewsCard: React.FC<Props> = ({ article }) => {
+  // routeLink: string = "/news/" + this.props.article.id;
 
-  render() {
-    return (
-      <IonCard title={this.props.article.title} id={this.props.article.id} routerLink={this.routeLink}>
-        <IonCardHeader>
-          <IonCardSubtitle>
-            {this.props.article.date}
-          </IonCardSubtitle>
-          <IonCardTitle>
-            {this.props.article.title}
-          </IonCardTitle>
-        </IonCardHeader>
-      </IonCard>
-    );
-  };
+  // render() {
+  return (
+    // <IonCard routerLink={this.routeLink}>
+    <IonCard onClick={() => console.log("NewsCard props", article,  "\n\nclick!\n\n")} routerLink={`/news/${article.id}`}>
+      <IonCardHeader>
+        <IonCardSubtitle>
+          {/* date:{this.props.article.date} id:{this.props.article.id}} */}
+          date:{article.date} id:{article.id}
+        </IonCardSubtitle>
+        <IonCardTitle>
+          {/* title:{this.props.article.title} */}
+          title:{article.title}
+        </IonCardTitle>
+      </IonCardHeader>
+    </IonCard>
+  );
+  // };
 };
 
 export default NewsCard;

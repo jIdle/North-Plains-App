@@ -4,7 +4,7 @@ import { newsArticles } from '../assets/content';
 //   title: string,
 //   date: string,
 //   id: string,
-//   content: string
+//   body: string
 // };
 
 export function findArticle(id: string) {
