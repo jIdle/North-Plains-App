@@ -4,6 +4,8 @@ Android and iOS app to mirror North Plains government website
 ## Framework, Runtime, CLI, and Package Versions
 
 ```
+$ ionic info
+
 Ionic:
 
    Ionic CLI       : 6.10.1

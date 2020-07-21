@@ -55,28 +55,26 @@ const Home: React.FC = () => {
     }
     if (num === 2 && state === 0) { return }
     slidesRef.current.getActiveIndex().then((value) => {
-      if(checkSlideStuck === value) {
-        console.log("checkSlideStuck\n****************\n*************")
-        window.location.reload(true)
+      if(checkSlideStuck == value) {
+        window.location.reload(true);
       } else {
-        console.log("autoplay value", value)
-        checkSlideStuck = value
+        checkSlideStuck = value;
       }
-    })
-    slidesRef.current.lockSwipes(true)
+    });
+    slidesRef.current.lockSwipes(true);
     setTimeout(() => {
-      slidesRef.current.lockSwipes(false)
+      slidesRef.current.lockSwipes(false);
       slidesRef.current.isEnd().then((value) => {
         if(value) {
-          slidesRef.current.slideTo(0)
-          slidesRef.current.lockSwipes(true)
+          slidesRef.current.slideTo(0);
+          slidesRef.current.lockSwipes(true);
         } else {
-          slidesRef.current.slideNext()
-          slidesRef.current.lockSwipes(true)
+          slidesRef.current.slideNext();
+          slidesRef.current.lockSwipes(true);
         }
-      })
-    }, 7000)
-  }
+      });
+    }, 7000);
+  };
 
   return (
     <IonPage>
@@ -115,7 +113,7 @@ const Home: React.FC = () => {
               <IonRow className="ion-text-center">
                 <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={walkOutline} /></IonButton><br />Community Events</IonCol>
                 <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={bookOutline} /></IonButton><br />City Library</IonCol>
-                <IonCol><IonButton className="menu-button" fill="clear"><IonIcon icon={peopleOutline} /></IonButton><br />City Council</IonCol>
+                <IonCol><IonButton className="menu-button" routerLink="/citycouncil" fill="clear"><IonIcon icon={peopleOutline} /></IonButton><br />City Council</IonCol>
               </IonRow>
             </IonGrid>
           </IonSlide>
