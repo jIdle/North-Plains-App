@@ -21,7 +21,7 @@ const parks = [
     name: "Community Garden",
     desc: "The Community Garden was started in 2012 thanks to donations of a lease by Robinson Floral and materials from various companies and groups. It is located on Commercial Street across from Fire Station 17.\n\nPlots are aluminum troughs that measure two feet wide by six feet long. There is a $15 annual fee. Water is included.\n\nAll community members are encouraged to enjoy the space for picnic.To reserve a space please call 503.647.5555.",
     address: "31360 NW Commercial St, North Plains, OR 97133",
-    embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.6600436863955!2d-123.00180808407507!3d45.597378379102814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495037c9da244e9%3A0xfc456d6bab16f188!2s31360%20NW%20Commercial%20St%2C%20North%20Plains%2C%20OR%2097133!5e0!3m2!1sen!2sus!4v1594290956465!5m2!1sen!2sus" width="380" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
+    embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.6600436863955!2d-123.00180808407507!3d45.597378379102814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495037c9da244e9%3A0xfc456d6bab16f188!2s31360%20NW%20Commercial%20St%2C%20North%20Plains%2C%20OR%2097133!5e0!3m2!1sen!2sus!4v1594290956465!5m2!1sen!2sus" width="410" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
     link: "https://goo.gl/maps/64bMKaDdy3Cjtyy37"
   },
   {
@@ -29,7 +29,7 @@ const parks = [
     name: "Frank Wing Park",
     desc: "Adjacent to the water tank, the park features picnic tables, benches and portable toilet.\n\nFrank Wing was instrumental in the development of North Plains, having assisted with the construction of streets and houses throughout the community.  Many members of the Wing family continue to live in North Plains.",
     address: "32150 NW Commercial St, North Plains, OR 97133",
-    embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.6161286692354!2d-123.00989248407501!3d45.59826107910281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549503650f10d2e7%3A0xf1214d969fb0d318!2s32150%20NW%20Commercial%20St%2C%20North%20Plains%2C%20OR%2097133!5e0!3m2!1sen!2sus!4v1594291239747!5m2!1sen!2sus" width="380" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
+    embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.6161286692354!2d-123.00989248407501!3d45.59826107910281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549503650f10d2e7%3A0xf1214d969fb0d318!2s32150%20NW%20Commercial%20St%2C%20North%20Plains%2C%20OR%2097133!5e0!3m2!1sen!2sus!4v1594291239747!5m2!1sen!2sus" width="410" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
     link: "https://goo.gl/maps/uUbjJNAk8Ci8PbgU7"
   },
   {
@@ -37,7 +37,7 @@ const parks = [
     name: "Jessie Mays Community Park",
     desc: "The largest of North Plains parks, it is a hub of community activities from dances and concerts to tennis, basketball, and baseball. It is the site of the annual Elephant Garlic Festival. A playground with slides and swings invites kids of all ages to play.\n\nThe Community Hall is used for private and public events.  Most City events including the annual Chili Cook-off, Ice Cream Social and Volunteer Recognition Night are at the Hall.",
     address: "30975 NW Hillcrest Street North Plains, OR 97133",
-    embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.5927057291237!2d-122.99827418407489!3d45.59873187910275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495037bf8e9fc5f%3A0x28db72330d71e736!2s30975%20NW%20Hillcrest%20St%2C%20North%20Plains%2C%20OR%2097133!5e0!3m2!1sen!2sus!4v1594291262430!5m2!1sen!2sus" width="380" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
+    embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.5927057291237!2d-122.99827418407489!3d45.59873187910275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495037bf8e9fc5f%3A0x28db72330d71e736!2s30975%20NW%20Hillcrest%20St%2C%20North%20Plains%2C%20OR%2097133!5e0!3m2!1sen!2sus!4v1594291262430!5m2!1sen!2sus" width="410" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
     link: "https://goo.gl/maps/SUJThzuaSfY4qwdJ8"
   },
   {
@@ -45,7 +45,7 @@ const parks = [
     name: "LaMordden Park",
     desc: "Named after a former the former the LaMordden family who have been active in our community for decades. This small park has the town's only water feature for play in the summer. It features a natural play area, benches and picnic tables. Located on curtis Street between Pacific and Highland Court to the east of Glencoe Road.",
     address: "10120 NW Curtis Street North Plains, OR 97133",
-    embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.871808547139!2d-122.99595658407507!3d45.593121679102715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549504828e01d7c9%3A0x1655e046aadbe83e!2s10120%20NW%20Curtis%20St%2C%20North%20Plains%2C%20OR%2097133!5e0!3m2!1sen!2sus!4v1594291294241!5m2!1sen!2sus" width="380" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
+    embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.871808547139!2d-122.99595658407507!3d45.593121679102715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549504828e01d7c9%3A0x1655e046aadbe83e!2s10120%20NW%20Curtis%20St%2C%20North%20Plains%2C%20OR%2097133!5e0!3m2!1sen!2sus!4v1594291294241!5m2!1sen!2sus" width="410" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>',
     link: "https://goo.gl/maps/SUJThzuaSfY4qwdJ8"
   }
 ];
