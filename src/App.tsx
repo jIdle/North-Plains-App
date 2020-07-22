@@ -43,6 +43,12 @@ declare global {
   interface Window { appHistory: History }
 };
 
+const PropsPage = ( title: any ) => {
+  return (
+    <h3>{title}</h3>
+  );
+};
+
 const App: React.FC = () => {
   // Store the history object globally so we can access it outside of React components
   window.appHistory = useHistory();
@@ -52,12 +58,12 @@ const App: React.FC = () => {
         <IonRouterOutlet>
           <Route path="/home" component={Home} exact={true} />
           <Route path="/news" component={News} exact={true} />
-          <Route path="/news/:id" component={NewsArticle} />
+          <Route path="/news/:id" render={(props) => <NewsArticle {...props} title={`Props through render`} />} />
+          {/* <Route path="/news/:id" component={NewsArticle} /> */}
           <Route path="/settings" component={Settings} exact={true} />
           <Route path="/parks" component={ParksPage} exact={true} />
           <Route path="/parks/:id" component={ParkDetail} />
           <Route path="/citycouncil" component={CityCouncil} exact={true} />
-          {/* <Route path="/" render={() => <Redirect to="/parks" />} exact={true} /> */}
           <Route path="/buttons" component={LabelExample} />
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
           {/* Grid test */}

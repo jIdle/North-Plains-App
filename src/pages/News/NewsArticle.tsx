@@ -10,29 +10,29 @@ import './NewsArticle.css';
 import Toolbar from '../../components/Toolbar';
 import { NewsArticleAPI, Article } from '../../hooks/NewsArticleAPI';
 
-type Props = {
-  article?: Article;
-//   title: string,
-//   date: string,
-//   id: string,
-//   body: string
+type ArticleProps = {
+  // article?: Article;
+  title: string;
+  date: string;
+  id: string;
+  body: string;
 };
 
 type State = {
 }
 
 // class NewsArticle extends React.Component<Props> {
-const NewsArticle: React.FC<Props> = ({ article }) => {
+const NewsArticle: React.FC<ArticleProps> = ({ title, date, id, body }) => {
   // const params = useParams();
   // console.log(params);
-  const { id } = useParams();
+  // const { id } = useParams();
   // const { id } = useParams();
   // const { found } = findArticle(id);
   const {articles, findArticle } = NewsArticleAPI();
-  const found = findArticle(id);
-  console.log("articleDetail", article);
-  console.log("found", found);
-  console.log("id", id);
+  // const found = findArticle(id);
+  console.log("articleDetail", title, date, id, body);
+  // console.log("found", found);
+  // console.log("id", id);
 
   // constructor(props: any) {
     // super(props);
@@ -40,20 +40,21 @@ const NewsArticle: React.FC<Props> = ({ article }) => {
   // }
 
   // render() {
-  if (found == null) {
-    return <p>Not found</p>;
-  }
+  // if (found == null) {
+  //   return <p>Not found</p>;
+  // }
   return (
-    <IonPage>
+    <>
       <IonHeader>
         <Toolbar title="News" page="newsArticle" btn="share" />
       </IonHeader>
       <IonContent>
         <button onClick={() => console.log("this.props")} >Hey</button>
-        {/* <p className="date">{found.date ?? ""}</p> */}
-        {/* <div dangerouslySetInnerHTML={{ __html: found.body }} /> */}
+        <p>NEWS ARTICLE</p>
+        <p className="date">date: {date ?? ""}</p>
+        <div dangerouslySetInnerHTML={{ __html: body }} />
       </IonContent>
-    </IonPage>
+    </>
   );
   // }
 };

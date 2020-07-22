@@ -8,6 +8,7 @@ import { arrowBack } from 'ionicons/icons';
 
 const CityCouncil: React.FC = () => {
   const [member, setMember] = useState(Content[0])
+  console.log("member", member)
 
   return (
     <IonPage>

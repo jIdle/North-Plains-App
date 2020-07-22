@@ -4,10 +4,12 @@ import { IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent,
 interface LinkItem {
   title: string;
   description: string;
-  thumbnail: string;
+  body?: string;
+  date?: string;
+  thumbnail?: string;
 }
 
-const Link: React.FC<LinkItem> = ({ title, description, thumbnail }) => {
+const Link: React.FC<LinkItem> = ({ title, description, body, thumbnail }) => {
   return (
     <React.Fragment>
       <IonHeader>

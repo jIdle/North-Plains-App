@@ -21,7 +21,9 @@ const NewsCard: React.FC<Props> = ({ article }) => {
   // render() {
   return (
     // <IonCard routerLink={this.routeLink}>
-    <IonCard onClick={() => console.log("NewsCard props", article,  "\n\nclick!\n\n")} routerLink={`/news/${article.id}`}>
+    // <IonCard onClick={() => console.log("NewsCard props", article,  "\n\nclick!\n\n")} routerLink={`/news/${article.id}`}>
+    // <IonCard >
+    <>
       <IonCardHeader>
         <IonCardSubtitle>
           {/* date:{this.props.article.date} id:{this.props.article.id}} */}
@@ -32,7 +34,8 @@ const NewsCard: React.FC<Props> = ({ article }) => {
           title:{article.title}
         </IonCardTitle>
       </IonCardHeader>
-    </IonCard>
+    </>
+    // </IonCard>
   );
   // };
 };
