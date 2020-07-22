@@ -6,7 +6,7 @@ import {
 } from '@ionic/react';
 import { parks } from '../../assets/content';
 import Toolbar from '../../components/Toolbar';
-import ParkItem from '../../components/ParkItem';
+import ParkItem from './ParkItem';
 
 const ParksPage: React.FC = () => {
   return (
