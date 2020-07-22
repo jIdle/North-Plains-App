@@ -4,8 +4,6 @@ Open source Android and iOS app to mirror the City of North Plains website. We p
 
 ## Working Prototype
 
-<style type='text/css'> img { width: 10px; } </style>
-
 ### Home page and overflow icons
 
 <div class="row">
@@ -16,6 +14,7 @@ Open source Android and iOS app to mirror the City of North Plains website. We p
         <img src="./images/Overflow.png" alt="Overflow Icons" title="Overflow icons from the home page" width="300" height="533" />
     </div>
 </div>
+<br/>
 
 ### Click on "News" to access list of articles and corresponding details.
 
@@ -27,41 +26,43 @@ Open source Android and iOS app to mirror the City of North Plains website. We p
         <img src="./images/Article.png" alt="Article" title="Article" width="300" height="533" />
     </div>
 </div>
+<br/>
 
 ### Click on "City Council" to access members.
 
 <div class="row">
     <div class="col">
-        <img src="./images/CityCouncilPage.png" alt="City Council Page" title="City Council" />
+        <img src="./images/CityCouncilPage.png" alt="City Council Page" title="City Council" width="300" height="533" />
     </div>
     <div class="col">
-        <img src="./images/Member.png" alt="Member Page" title="Member" />
+        <img src="./images/Member.png" alt="Member Page" title="Member" width="300" height="533" />
     </div>
 </div>
+<br/>
 
 ### "Parks" gives you a list of parks and corresponding details.
 
 <div class="row">
     <div class="col">
-        <img src="./images/ParksPage.png" alt="List of Parks" title="List of Parks" />
+        <img src="./images/ParksPage.png" alt="List of Parks" title="List of Parks" width="300" height="533" />
     </div>
     <div class="col">
-        <img src="./images/ParkDetail.png" alt="Park Details" title="Park Details" />
+        <img src="./images/ParkDetail.png" alt="Park Details" title="Park Details" width="300" height="533" />
     </div>
 </div>
+<br/>
 
 ### Customizable splash page and settings which are accessible from most pages.
 
 <div class="row">
     <div class="col">
-        <img src="./images/Splash.png" alt="Splash Page" title="Splash Page" />
+        <img src="./images/Splash.png" alt="Splash Page" title="Splash Page" width="300" height="533" />
     </div>
     <div class="col">
-        <img src="./images/Settings.png" alt="Settings Page" title="Settings Page" />
+        <img src="./images/Settings.png" alt="Settings Page" title="Settings Page" width="300" height="533" />
     </div>
 </div>
-
-
+<br/>
 
 ## Framework, Runtime, CLI, and Package Versions
 
