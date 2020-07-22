@@ -4,48 +4,64 @@ Open source Android and iOS app to mirror the City of North Plains website. We p
 
 ## Working Prototype
 
+<style type='text/css'> img { width: 10px; } </style>
+
 ### Home page and overflow icons
 
-![Home Page](./images/Home.png "Home Page")
-![Overflow Icons](./images/Overflow.png "Overflow icons from the home page")
-
-<img src="./images/Home.png" alt="Home Page" title="Home Page" />
-<img src="./images/Overflow.png" alt="Overflow Icons" title="Overflow icons from the home page" />
+<div class="row">
+    <div class="col">
+        <img src="./images/Home.png" alt="Home Page" title="Home Page" width="300" height="533" />
+    </div>
+    <div class="col">
+        <img src="./images/Overflow.png" alt="Overflow Icons" title="Overflow icons from the home page" width="300" height="533" />
+    </div>
+</div>
 
 ### Click on "News" to access list of articles and corresponding details.
 
-![List of Articles](./images/NewsPage.png "List of Articles")
-![Article](./images/Article.png "Article")
-
-<img src="./images/NewsPage.png" alt="List of Articles" title="List of Articles" />
-<img src="./images/Article.png" alt="Article" title="Article" />
+<div class="row">
+    <div class="col">
+        <img src="./images/NewsPage.png" alt="List of Articles" title="List of Articles" width="300" height="533" />
+    </div>
+    <div class="col">
+        <img src="./images/Article.png" alt="Article" title="Article" width="300" height="533" />
+    </div>
+</div>
 
 ### Click on "City Council" to access members.
 
-![City Council Page](./images/CityCouncilPage.png "City Council")
-![Member Page](./images/Member.png "Member")
-
-<img src="./images/CityCouncilPage.png" alt="City Council Page" title="City Council" />
-<img src="./images/Member.png" alt="Member Page" title="Member" />
-
+<div class="row">
+    <div class="col">
+        <img src="./images/CityCouncilPage.png" alt="City Council Page" title="City Council" />
+    </div>
+    <div class="col">
+        <img src="./images/Member.png" alt="Member Page" title="Member" />
+    </div>
+</div>
 
 ### "Parks" gives you a list of parks and corresponding details.
 
-![List of Parks](./images/ParksPage.png "List of Parks")
-![Park Details](./images/ParkDetail.png "Park Details")
-
-<img src="./images/ParksPage.png" alt="List of Parks" title="List of Parks" />
-<img src="./images/ParkDetail.png" alt="Park Details" title="Park Details" />
+<div class="row">
+    <div class="col">
+        <img src="./images/ParksPage.png" alt="List of Parks" title="List of Parks" />
+    </div>
+    <div class="col">
+        <img src="./images/ParkDetail.png" alt="Park Details" title="Park Details" />
+    </div>
+</div>
 
 ### Customizable splash page and settings which are accessible from most pages.
 
-![Splash Page](./images/Splash.png "Splash Page")
-![Settings Page](./images/Settings.png "Settings Page")
+<div class="row">
+    <div class="col">
+        <img src="./images/Splash.png" alt="Splash Page" title="Splash Page" />
+    </div>
+    <div class="col">
+        <img src="./images/Settings.png" alt="Settings Page" title="Settings Page" />
+    </div>
+</div>
 
-<img src="./images/Splash.png" alt="Splash Page" title="Splash Page" />
-<img src="./images/Settings.png" alt="Settings Page" title="Settings Page" />
 
-<style type='text/css'> img { width: 10px; } </style>
 
 ## Framework, Runtime, CLI, and Package Versions
 
