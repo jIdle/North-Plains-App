@@ -1,6 +1,6 @@
 # North Plains App
 
-Open source Android and iOS app to mirror the City of North Plains website. We hope to use project as a template for any city that wants their own app.
+Open source Android and iOS app to mirror the City of North Plains website. We plan to use this project as a template for any city that wants their own app.
 
 ## Working Prototype
 
@@ -9,29 +9,43 @@ Open source Android and iOS app to mirror the City of North Plains website. We h
 ![Home Page](./images/Home.png "Home Page")
 ![Overflow Icons](./images/Overflow.png "Overflow icons from the home page")
 
+<img src="./images/Home.png" alt="Home Page" title="Home Page" />
+<img src="./images/Overflow.png" alt="Overflow Icons" title="Overflow icons from the home page" />
+
 ### Click on "News" to access list of articles and corresponding details.
 
 ![List of Articles](./images/NewsPage.png "List of Articles")
 ![Article](./images/Article.png "Article")
+
+<img src="./images/NewsPage.png" alt="List of Articles" title="List of Articles" />
+<img src="./images/Article.png" alt="Article" title="Article" />
 
 ### Click on "City Council" to access members.
 
 ![City Council Page](./images/CityCouncilPage.png "City Council")
 ![Member Page](./images/Member.png "Member")
 
+<img src="./images/CityCouncilPage.png" alt="City Council Page" title="City Council" />
+<img src="./images/Member.png" alt="Member Page" title="Member" />
+
+
 ### "Parks" gives you a list of parks and corresponding details.
 
 ![List of Parks](./images/ParksPage.png "List of Parks")
 ![Park Details](./images/ParkDetail.png "Park Details")
 
+<img src="./images/ParksPage.png" alt="List of Parks" title="List of Parks" />
+<img src="./images/ParkDetail.png" alt="Park Details" title="Park Details" />
+
 ### Customizable splash page and settings which are accessible from most pages.
 
 ![Splash Page](./images/Splash.png "Splash Page")
-![Settings Page](./images/Settings.png "Setting Page")
+![Settings Page](./images/Settings.png "Settings Page")
 
-<style type='text/css'>
-   img { width: 300px; }
-</style>
+<img src="./images/Splash.png" alt="Splash Page" title="Splash Page" />
+<img src="./images/Settings.png" alt="Settings Page" title="Settings Page" />
+
+<style type='text/css'> img { width: 10px; } </style>
 
 ## Framework, Runtime, CLI, and Package Versions
 
