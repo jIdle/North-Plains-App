@@ -17,7 +17,7 @@ const ParksPage: React.FC = () => {
       <IonContent>
         {parks.map((park: any) =>
           <ParkItem park={park} />
-        )};
+        )}
       </IonContent>
     </IonPage>
   );
