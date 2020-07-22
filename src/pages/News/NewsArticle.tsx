@@ -5,7 +5,7 @@ import {
   IonContent,
 } from '@ionic/react';
 import { useParams } from 'react-router-dom';
-import { findArticle } from '../../hooks/findArticle';
+import { findArticle } from './findArticle';
 import './NewsArticle.css';
 import Toolbar from '../../components/Toolbar';
 

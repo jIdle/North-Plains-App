@@ -1,4 +1,4 @@
-import { newsArticles } from '../assets/content';
+import { newsArticles } from '../../assets/content';
 
 // export interface Article {
 //   title: string,

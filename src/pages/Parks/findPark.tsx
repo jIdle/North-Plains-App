@@ -1,4 +1,4 @@
-import { parks } from '../assets/content';
+import { parks } from '../../assets/content';
 
 // export interface Park {
 //   id: string;

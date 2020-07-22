@@ -8,7 +8,7 @@ import {
   IonIcon
 } from '@ionic/react';
 import { locationOutline } from 'ionicons/icons';
-import { findPark } from '../../hooks/findPark';
+import { findPark } from './findPark';
 import Toolbar from '../../components/Toolbar';
 import './ParkDetail.css';
 
