@@ -1,42 +1,27 @@
-import React, { useEffect } from 'react';
-import {
-  IonPage,
-  IonHeader,
-  IonContent,
-} from '@ionic/react';
-import { useParams } from 'react-router-dom';
-// import { findArticle } from '../../hooks/findArticle';
+import React from 'react';
+import { IonPage, IonHeader, IonContent } from '@ionic/react';
 import './NewsArticle.css';
 import Toolbar from '../../components/Toolbar';
-import { NewsArticleAPI, Article } from '../../hooks/NewsArticleAPI';
 
 type ArticleProps = {
   article: any;
-  // title: string;
-  // date: string;
-  // id: string;
-  // body: string;
 };
 
-type State = {
-  article: any;
-}
-
-// class NewsArticle extends React.Component {
-// const NewsArticle: React.FC<State> = ( state ) => {
-// const NewsArticle: React.FC<ArticleProps> = ( article ) => {
-// const NewsArticle: React.FC<ArticleProps> = ({ title, date, id, body }) => {
 const NewsArticle: React.FC<ArticleProps> = ({ article }) => {
-  console.log(article)
+  const { state } = article.location
   return (
+    <IonPage>
+      <IonHeader>
+        <Toolbar title="News" page="news" btn="settings" />
+      </IonHeader>
       <IonContent>
-        <button onClick={() => console.log("this.props")} >Hey</button>
-        <p>NEWS ARTICLE</p>
-        {/* <p className="date">date: {found.date ?? ""}</p> */}
-        {/* <div dangerouslySetInnerHTML={{ __html: found.body }} /> */}
+        <h1 className="title">title: {state.title}</h1>
+        <p className="date">date: {state.date ?? ""}</p>
+        {/* <div dangerouslySetInnerHTML={{ __html: state.body }} /> */}
+        <p>body: {state.body}</p>
       </IonContent>
+    </IonPage>
   );
-  // }
 };
 
 export default NewsArticle;

@@ -11,7 +11,6 @@ import ParksPage from './pages/Parks/ParksPage';
 import ParkDetail from './pages/Parks/ParkDetail';
 import CityCouncil from './pages/CityCouncil/CityCouncil';
 // Testing imports
-import { GridExample } from './test/grid';
 import { LabelExample } from './test/button';
 
 import { History } from 'history';
@@ -43,12 +42,6 @@ declare global {
   interface Window { appHistory: History }
 };
 
-const PropsPage = ( title: any ) => {
-  return (
-    <h3>{title}</h3>
-  );
-};
-
 const App: React.FC = () => {
   // Store the history object globally so we can access it outside of React components
   window.appHistory = useHistory();
@@ -58,18 +51,13 @@ const App: React.FC = () => {
         <IonRouterOutlet>
           <Route path="/home" component={Home} exact={true} />
           <Route path="/news" component={News} exact={true} />
-          {/* <Route path="/news/:id" render={(props) => <NewsArticle articles={props} />} /> */}
-          {/* <Route path="/news/:id" render={(props) => <NewsArticle {...props} title={`Props through render`} />} /> */}
-          <Route path="/news/:id" component={NewsArticle} />
+          <Route path="/news/:id" render={(state) => <NewsArticle article={state} />} />
           <Route path="/settings" component={Settings} exact={true} />
           <Route path="/parks" component={ParksPage} exact={true} />
           <Route path="/parks/:id" component={ParkDetail} />
           <Route path="/citycouncil" component={CityCouncil} exact={true} />
           <Route path="/buttons" component={LabelExample} />
           <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
-          {/* Grid test */}
-          <Route path="/test" component={GridExample} exact={true} />
-          {/* <Route path="/" render={() => <Redirect to="/test" />} exact={true} /> */}
         </IonRouterOutlet>
       </IonReactRouter>
     </IonApp>
