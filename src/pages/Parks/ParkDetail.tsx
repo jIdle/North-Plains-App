@@ -19,6 +19,7 @@ import './ParkDetail.css';
 const ParkDetail: React.FC = () => {
   const { id } = useParams();
   const { found } = findPark(id);
+  console.log("ParkDetail")
   if (found == null) {
     return <p>Not found</p>;
   }

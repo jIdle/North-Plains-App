@@ -58,8 +58,9 @@ const App: React.FC = () => {
         <IonRouterOutlet>
           <Route path="/home" component={Home} exact={true} />
           <Route path="/news" component={News} exact={true} />
-          <Route path="/news/:id" render={(props) => <NewsArticle {...props} title={`Props through render`} />} />
-          {/* <Route path="/news/:id" component={NewsArticle} /> */}
+          {/* <Route path="/news/:id" render={(props) => <NewsArticle articles={props} />} /> */}
+          {/* <Route path="/news/:id" render={(props) => <NewsArticle {...props} title={`Props through render`} />} /> */}
+          <Route path="/news/:id" component={NewsArticle} />
           <Route path="/settings" component={Settings} exact={true} />
           <Route path="/parks" component={ParksPage} exact={true} />
           <Route path="/parks/:id" component={ParkDetail} />

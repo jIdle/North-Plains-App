@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   IonPage,
   IonHeader,
@@ -11,50 +11,30 @@ import Toolbar from '../../components/Toolbar';
 import { NewsArticleAPI, Article } from '../../hooks/NewsArticleAPI';
 
 type ArticleProps = {
-  // article?: Article;
-  title: string;
-  date: string;
-  id: string;
-  body: string;
+  article: any;
+  // title: string;
+  // date: string;
+  // id: string;
+  // body: string;
 };
 
 type State = {
+  article: any;
 }
 
-// class NewsArticle extends React.Component<Props> {
-const NewsArticle: React.FC<ArticleProps> = ({ title, date, id, body }) => {
-  // const params = useParams();
-  // console.log(params);
-  // const { id } = useParams();
-  // const { id } = useParams();
-  // const { found } = findArticle(id);
-  const {articles, findArticle } = NewsArticleAPI();
-  // const found = findArticle(id);
-  console.log("articleDetail", title, date, id, body);
-  // console.log("found", found);
-  // console.log("id", id);
-
-  // constructor(props: any) {
-    // super(props);
-    // console.log("NewsArticle props", this.props)
-  // }
-
-  // render() {
-  // if (found == null) {
-  //   return <p>Not found</p>;
-  // }
+// class NewsArticle extends React.Component {
+// const NewsArticle: React.FC<State> = ( state ) => {
+// const NewsArticle: React.FC<ArticleProps> = ( article ) => {
+// const NewsArticle: React.FC<ArticleProps> = ({ title, date, id, body }) => {
+const NewsArticle: React.FC<ArticleProps> = ({ article }) => {
+  console.log(article)
   return (
-    <>
-      <IonHeader>
-        <Toolbar title="News" page="newsArticle" btn="share" />
-      </IonHeader>
       <IonContent>
         <button onClick={() => console.log("this.props")} >Hey</button>
         <p>NEWS ARTICLE</p>
-        <p className="date">date: {date ?? ""}</p>
-        <div dangerouslySetInnerHTML={{ __html: body }} />
+        {/* <p className="date">date: {found.date ?? ""}</p> */}
+        {/* <div dangerouslySetInnerHTML={{ __html: found.body }} /> */}
       </IonContent>
-    </>
   );
   // }
 };

@@ -9,6 +9,7 @@ import Toolbar from '../../components/Toolbar';
 import ParkItem from '../../components/ParkItem';
 
 const ParksPage: React.FC = () => {
+  console.log("ParksPage")
   return (
     <IonPage>
       <IonHeader>
@@ -16,7 +17,7 @@ const ParksPage: React.FC = () => {
       </IonHeader>
       <IonContent>
         {parks.map((park: any) =>
-          <ParkItem park={park} />
+          <ParkItem key={park.id} park={park} />
         )};
       </IonContent>
     </IonPage>
